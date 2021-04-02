@@ -1,27 +1,29 @@
 #title {
-    /* background-color: #ff4c68; */
+    /*background-color: #ff4c68;*/
     background-color: black;
+    /*background:-webkit-linear-gradient(bottom, #886600, #227700);*/
     color: #fff;
     text-align: left;
 }
 
 #title .container-fluid {
-    padding: 3% 15% 7%;
+    padding: 3% 10% 0%;
 }
 
 
 /* Title Image */
 
 .title-image {
-    width: 70%;
+    width: 60%;
     transform: rotate(15deg);
     position: absolute;
-    right: 20%;
+    right: 30%;
 }
 
 a {
     color: blanchedalmond;
 }
+
 
 .filer {
     text-align: left;
@@ -90,6 +92,8 @@ p {
 
 .nav-item {
     padding: 0 10px;
+    width: 120px;
+
 }
 
 .nav-link {
