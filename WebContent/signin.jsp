@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,47 +59,39 @@
                 </nav>
             </div>
         </section>
-        <div id="conca" class="conb" style="margin-left: 0%; margin-right: 0%; ">
-        	<div class="wrapbox-top">
-        		<p>Request an Account</p>
-        	</div>
-        	<div>
-        		<ul id="caa" class="formb">
-        			<li class="fromTitle">
-        				<h2>Register</h2>
-        			</li>
-        			<li>
-        				<p>USER NAME</p>
-        				<input type="text" name="UserName" class="un">
-        			</li>
-        			<li>
-        				<p>PASSWORD</p>
-        				<input type="text" name="PassWord" class="ps">
-        			</li>
-					<li>
-						<p>CHECK PASSWORD</p>
-						<input type="text" name="Check PassWord" class="ps">
+        <div class="conb" style="margin-left: 0%; margin-right: 0%; ">
+			<div class="wrapbox-top">
+				<p>My Account</p>
+			</div>
+			<div>
+				<ul class="formb">
+					<li class="fromTitle">
+						<h2>Login</h2>
 					</li>
 					<li>
-						<p>PHONE NUMBER</p>
-						<input type="text" name="phone Number" class="ps">
+						<p>USER NAME</p>
+						<input type="text" name="username" class="un">
 					</li>
 					<li>
-						<p>EMAIL ADDRESS</p>
-						<input type="text" name="Email Address" class="ps">
+						<p>PASSWORD</p>
+						<input type="text" name="password" class="ps">
 					</li>
 					<li>
-						<p>POSTAL</p>
-						<input type="text" name="Postal" class="ps">
+						<div class="bottomboxa">
+							<p>
+                                <button class="login" style="outline: none;">LOGIN</button>
+                            </p>
+							<p>
+								<input type="checkbox">Remember me	
+							</p>
+							<p>
+                                <a class="" href="reset.html">LOST OR FORGET PASSWORD?</a>
+                            </p>
+						</div>
 					</li>
-        			<li>
-        				<div class="bottomboxa">
-        					<p><button class="logina" style="outline: none;">REGISTER</button></p>
-        				</div>
-        			</li>
-        			
-        		</ul>
-        	</div>
+					
+				</ul>
+			</div>
         </div>
 
         <footer class="footer">
