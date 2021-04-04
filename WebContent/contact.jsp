@@ -21,42 +21,7 @@
     </head>
     <body>
         <!------ featured products ------>
-        <section class="colored-section" id="title">
-            <div class="container-fluid" style="padding-top: 40px;padding-bottom: 0px;">
-                <!-- Nav Bar -->
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                    <div class="logo">
-                        <a href="index.html"><img src="./Images-Branding/logo.jpg" /></a>
-                    </div>
-                    <a class="navbar-brand" href="">The Garden Center</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="products.html">PRODUCTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">CONTACT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="signin.html">SIGN IN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="registration.html">REGISTRATION</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </section>
+       <jsp:include page="menu.jsp" />
 
         <div class="wrapbox-top">
 			<p>Contact us</p>
@@ -139,22 +104,7 @@
 	    </div>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVt4eD0JIC1238JDRy4xmBJW2nCXZftN8&callback=initMap"></script> 
 
-		<footer class="footer">
-			<div class="containerb">
-				<ul>
-					<li>
-						<a href="">Copyright 2021 - The Garden Center</a>
-					</li>
-					<li>
-						<a class="" href="index.html">Home</a>
-						<a class="" href="products.html">Products</a>
-						<a class="" href="contact.html">Contact</a>
-						<a class="" href="about.html">About</a>
-						<a class="" href="registration.html">Registration</a>
-					</li>
-				</ul>
-			</div>
-		</footer>
+   		<jsp:include page="footer_menu.jsp" />
         
     </body>
 </html>
