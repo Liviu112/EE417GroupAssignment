@@ -12,7 +12,7 @@
                 <!-- Nav Bar -->
                 <nav class="navbar navbar-expand-lg navbar-dark">
 					<div class="logo">
-					    <a href="index.html"><img src="./Images-Branding/logo.jpg" /></a>
+					    <a href="index.jsp"><img src="./Images-Branding/logo.jpg" /></a>
 					</div>
                     <a class="navbar-brand" href="">The Garden Center</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">

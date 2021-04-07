@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,25 +34,25 @@
                 	<h1>Wherever life plants you, bloom with grace.</h1>
                 </div>
                         <li>
-                            <a href="products.html">
+                            <a href="products.jsp">
                             <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
                             <span>product 1</span>
                             </a>
                         </li>
                         <li>
-                            <a href="products.html">
+                            <a href="products.jsp">
                             <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
                             <span>product 2</span>
                             </a>
                         </li>
                         <li>
-                            <a href="products.html">
+                            <a href="products.jsp">
                             <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
                             <span>product 3</span>
                             </a>
                         </li>
                         <li>
-                            <a href="products.html">
+                            <a href="products.jsp">
                             <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
                             <span>product 4</span>
                             </a>
