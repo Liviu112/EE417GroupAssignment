@@ -39,7 +39,7 @@
 					</li>
 					<li>
 						<p>PASSWORD</p>
-						<input type="text" name="password" class="ps">
+						<input type="password" name="password" class="ps">
 					</li>
 					<li>
 						<div class="bottomboxa">
