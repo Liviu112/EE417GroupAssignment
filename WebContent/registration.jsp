@@ -30,44 +30,46 @@
         		<p>Request an Account</p>
         	</div>
         	<div>
-        		<ul id="caa" class="formb">
-        			<li class="fromTitle">
-        				<h2>Register</h2>
-        			</li>
-        			<li>
-        				<p>USER NAME</p>
-        				<input type="text" name="uname" class="un">
-        			</li>
-        			<li>
-        				<p>PASSWORD</p>
-        				<input type="password" name="pwd" class="ps">
-        			</li>
-					<li>
-						<p>CHECK PASSWORD</p>
-						<input type="password" name="Check PassWord" class="ps">
-					</li>
-					<li>
-						<p>PHONE NUMBER</p>
-						<input type="text" name="phone" class="ps">
-					</li>
-					<li>
-						<p>EMAIL ADDRESS</p>
-						<input type="text" name="email" class="ps">
-					</li>
-					<li>
-						<p>POSTAL</p>
-						<input type="text" name="postal" class="ps">
-					</li>
-        			<li>
-        				<div class="bottomboxa">
-        					<p><button class="logina" type="submit" style="outline: none;">REGISTER</button></p>
-        				</div>
-        			</li>
-        			
-        		</ul>
+        		<form id="formLogin" method="POST" action="registrationServlet">
+	        		<ul id="caa" class="formb">
+	        			<li class="fromTitle">
+	        				<h2>Register</h2>
+	        			</li>
+	        			<li>
+	        				<p>USER NAME</p>
+	        				<input type="text" name="uname" class="un">
+	        			</li>
+	        			<li>
+	        				<p>PASSWORD</p>
+	        				<input type="password" name="pwd" class="ps">
+	        			</li>
+						<li>
+							<p>CHECK PASSWORD</p>
+							<input type="password" name="Check PassWord" class="ps">
+						</li>
+						<li>
+							<p>PHONE NUMBER</p>
+							<input type="text" name="phone" class="ps">
+						</li>
+						<li>
+							<p>EMAIL ADDRESS</p>
+							<input type="text" name="email" class="ps">
+						</li>
+						<li>
+							<p>POSTAL</p>
+							<input type="text" name="postal" class="ps">
+						</li>
+	        			<li>
+	        				<div class="bottomboxa">
+	        					<p><button class="logina" type="submit" style="outline: none;">REGISTER</button></p>
+	        				</div>
+	        			</li>
+	        		</ul>
+        		</form>
         	</div>
         </div>
 
         <jsp:include page="footer_menu.jsp" />
+    
     </body>
 </html>

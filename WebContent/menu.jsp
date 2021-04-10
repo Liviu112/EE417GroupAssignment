@@ -1,13 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
  <section class="colored-section" id="title">
+   <% HttpSession sess = request.getSession(false);%>
             <div class="container-fluid" style="padding-top: 40px;padding-bottom: 0px;">
                 <!-- Nav Bar -->
                 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -32,16 +24,27 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="about.jsp">ABOUT</a>
                             </li>
+                            <!-- If the user is logged in -->
+                            <% if(sess.getAttribute("User")!=null){%>
+                            <li class="nav-item">
+                             	<!-- TO DO  -->
+                                <a class="nav-link" href=""><%=sess.getAttribute("User").toString()%></a> 
+                            </li>
+                            <% } else {%>
+                            <!-- else show the register or log in options -->
                             <li class="nav-item">
                                 <a class="nav-link" href="signin.jsp">SIGN IN</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="registration.jsp">REGISTRATION</a>
                             </li>
+             				<%};%>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="registration.jsp"></a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </section>
-</body>
-</html>
