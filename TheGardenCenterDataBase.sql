@@ -13,7 +13,7 @@ CREATE TABLE CustomersInformation (
   Town varchar(15) DEFAULT NULL,
   County varchar(10) DEFAULT NULL,
   LastEnteryDate varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE Marketing (
   CustomerID int NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Marketing (
   LastChangeDate varchar(15) DEFAULT NULL,
   LastContactDate varchar(20) DEFAULT NULL,
   LastEntryRefresh varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE CustomersAcc (
   CustomerID int NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE CustomersAcc (
   Pass varchar(20) NOT NULL,
   LastChangeDate varchar(15) NOT NULL,
   AccType varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE ProductsInformation (
   ProductID int NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE ProductsInformation (
   Maturity varchar(15) NOT NULL,
   Availability int NOT NULL, 
   LastEntryRefresh varchar(13) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `transactionshistory` (
   `ProductID` int NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE `transactionshistory` (
   `Quantity` varchar(15) NOT NULL,
   `TotalValue` varchar(20) NOT NULL,
   `TransactionDate` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 insert into customersacc (CustomerID, Username, Pass, LastChangeDate, AccType) values(1, "Alex", "Alex", "20/20/2020","normal");
 insert into customersacc (CustomerID, Username, Pass, LastChangeDate, AccType) values(2, "Rex", "Rex", "20/20/2020","admin");

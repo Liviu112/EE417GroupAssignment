@@ -91,7 +91,7 @@ public class loginServlet extends HttpServlet {
 		Statement stmt = null;
 		ResultSet rs = null;
 		String JDBCUrl = "jdbc:mysql://localhost:3306/thegardencenterdatabase";
-		String username = "liv";
+		String username = "root";
 		String password = "";
 		
 		  try {
