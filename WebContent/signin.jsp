@@ -29,36 +29,40 @@
 				<p>My Account</p>
 			</div>
 			<div>
-				<ul class="formb">
-					<li class="fromTitle">
-						<h2>Login</h2>
-					</li>
-					<li>
-						<p>USER NAME</p>
-						<input type="text" name="username" class="un">
-					</li>
-					<li>
-						<p>PASSWORD</p>
-						<input type="password" name="password" class="ps">
-					</li>
-					<li>
-						<div class="bottomboxa">
-							<p>
-                                <button class="login" style="outline: none;">LOGIN</button>
-                            </p>
-							<p>
-								<input type="checkbox">Remember me	
-							</p>
-							<p>
-                                <a class="" href="reset.jsp">LOST OR FORGET PASSWORD?</a>
-                            </p>
-						</div>
-					</li>
-					
-				</ul>
+			<form id="formLogin" method="POST" action="loginServlet"> 
+					<ul class="formb">
+						
+						<li class="fromTitle">
+						<span style="color: red;">${error}</span>
+							<h2>Login</h2>
+						</li>
+						<li>
+							<p>USER NAME</p>
+							<input type="text" name="username" class="un" required="">
+						</li>
+						<li>
+							<p>PASSWORD</p>
+							<input type="password" name="password" class="ps" required="">
+						</li>
+						<li>
+							<div class="bottomboxa">
+								<p>
+	                                <button class="login" style="outline: none;" onclick="loginServlet" type="submit">LOGIN</button>
+	                            </p>
+								<p>
+									<input type="checkbox">Remember me	
+								</p>
+								<p>
+	                                <a class="" href="reset.jsp">LOST OR FORGET PASSWORD?</a>
+	                            </p>
+							</div>
+						</li>
+
+					</ul>
+				</form>
 			</div>
         </div>
-
+        
          <jsp:include page="footer_menu.jsp" />
         
     </body>
