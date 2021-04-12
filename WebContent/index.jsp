@@ -29,36 +29,87 @@
                 <div class="wrapbox-top">
 				    <p>Home</p>
 			    </div>
+                <div class="row">
+                    <div class="col-md-12">   
+                        <div class="treepage">
+                            <div class="treepage-bg" id="treepagebg">
+                                <div class="treepagecontent">
+                                    <div class="treepagetext">
+                                        <h1>Wherever life plants you, bloom with grace</h1>
+                                    </div>
+                                    <a class="btn btn-success btn-lg treepagebtn" href="products.jsp">view our products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                   
+            </div>
+ 
+            <div class="row" >
+                <div class="col-md-2"></div>
+                    <div class="cube">
+                        <div class="img1"></div>
+                        <div class="img2"></div>
+                        <div class="img3"></div>
+                        <div class="img4"></div>
+                        <div class="img5"></div>
+                        <div class="img6"></div>
+                    </div>
 
-                <div class="wrapbox-middle">
-                	<h1>Wherever life plants you, bloom with grace.</h1>
+                <div class="col-md-2"></div>
+
+                <div class="col-md-4">
+                    <h3>Safer Shopping at Garden Center</h3>
+                    <p style="text-align: left">Our product range has also expanded to include an award winning seed range, young plants, bulbs, seed potatoes, onions and  garlic sets, soft fruit and fruit trees as well as an extensive range of gardening supplies. All have been carefully selected through stringent testing and trials to make gardening a pleasure and a success for our customers. In addition, we also offer a wonderful range of Christmas gifts sent with a personalised card to both the gardeners and non gardeners in your life!.</p>
+
+                    <p style="text-align: left">Following the Covid-19 pandemic, we had to temporarily close our charity shops and cancel traditional fundraising events which has had a major impact on our ability to generate funds.</p>
                 </div>
-                        <li>
-                            <a href="products.jsp">
-                            <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
-                            <span>product 1</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products.jsp">
-                            <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
-                            <span>product 2</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products.jsp">
-                            <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
-                            <span>product 3</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="products.jsp">
-                            <img src="./Images-Products/flowers/mix/flower.jpg" alt="" />
-                            <span>product 4</span>
-                            </a>
-                        </li>     
+
+                <div class="col-md-2"></div>
+
+            <div class="row">
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+                <div class="col-md-12">&nbsp</div>
+            </div>        
+
+            <div class="row" style="background-color: #2F2828">
+                <div class="col-md-12"> &nbsp</div>
+                <div class="col-md-12"> &nbsp</div>
+                <div class="col-md-2"></div>
+            
+        <div class="col-md-8">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg" width="400" alt="..."><p>Daisy</p></a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-6">
+                        <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/dandelion/5600240736_4a90c10579_n.jpg" width="400" alt="..."><p>Dandelion</p></a>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col-md-12">
                 </div>
             </div>
+                    
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/roses/1469726748_f359f4a8c5.jpg" width="400" alt="..."><p>Rose</p></a>
+                </div>
+
+                <div class="col-xs-6 col-md-6">
+                    <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/tulips/8838914676_8ef4db7f50_n.jpg" width="400" alt="..."><p>Tulips</p></a>
+                </div> 
+            </div>  
+        </div>
 
 	   <jsp:include page="footer_menu.jsp" />
         

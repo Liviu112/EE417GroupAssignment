@@ -52,9 +52,10 @@
 						</li>
 						<li>
 							<p>Message</p>
-							<textarea rows="10" cols="65"></textarea>
+							<textarea rows="8" cols="65"></textarea>
 						</li>
 						<li></li>
+						<button type="button" class="btn btn-primary btn-lg" style="background: #332C2C;">Submit</button>
 					</ul>
                 </div>
 			</div>

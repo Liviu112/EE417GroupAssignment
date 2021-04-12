@@ -61,7 +61,6 @@ p {
 .nav-item {
     padding: 0 10px;
     width: 120px;
-
 }
 
 .nav-link {
@@ -70,21 +69,8 @@ p {
 }
 
 
-/* download buttons */
+/* Products images */
 
-.download-button {
-    margin: 5% 3% 5% 0;
-}
-
-@media (max-width: 1028px) {
-    #title {
-        text-align: center;
-    }
-    .title-image {
-        position: static;
-        transform: rotate(0);
-    }
-}
 
 .rating .fa {
     color: #ff523b;
@@ -370,7 +356,7 @@ textarea{
 
 .conc {
 	width: 100%;
-	height: 700px;
+	height: 100%;
 }
 
 #conca{
@@ -382,4 +368,127 @@ textarea{
 
 #cab{
 	height: 330px;
+}
+
+
+/*home page layout*/
+
+
+.treepage{
+    position: absolute;
+    width:100%;
+    height:1200px;
+}
+ 
+.treepage-bg{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+#treepagebg{
+    background-image: url("../Images-Branding/bg.jpg");
+}
+ 
+.treepagecontent{
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+}
+ 
+.treepagetext{
+    margin-top:50px;
+    color:#00CC00;
+}
+ 
+.treepagetext p{
+    margin-top:20px;
+    color:#000;
+    font-size:20px;
+    line-height:10px;
+}
+ 
+.treepagebtn{
+margin-top:700px;
+font-size:25px;
+}
+
+
+/*rotating cube */
+
+
+.cube {
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transform-origin: 125px 125px 0;
+  animation: rotate-cube 10s ease-in-out infinite;
+}
+
+.cube > div {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.8;
+  position: absolute;
+  box-shadow: inset 0 0 4px 2px rgba(106, 106, 106, 0.4);
+}
+
+.cube .img1 {
+  background-image: url("../Images-Products/flowers/daisy/54377391_15648e8d18.jpg");
+  transform: rotateY(0deg) translateZ(125px);
+}
+
+.cube .img2 {
+  background-image: url("../Images-Products/flowers/dandelion/5600240736_4a90c10579_n.jpg");
+  transform: rotateY(90deg) translateZ(125px);
+}
+
+.cube .img3 {
+  background-image: url("../Images-Products/flowers/mix/baby-blue-eyes.jpg");
+  transform: rotateY(-90deg) translateZ(125px);
+}
+
+.cube .img4 {
+  background-image: url("../Images-Products/flowers/mix/gailardia-nadobna.jpg");
+  transform: rotateX(90deg) translateZ(125px);
+}
+
+.cube .img5 {
+  background-image: url("../Images-Products/flowers/mix/oriental-lily.jpg");
+  transform: rotateX(-90deg) translateZ(125px);
+}
+
+.cube .img6 {
+  background-image: url("../Images-Products/flowers/mix/yellow-marigold.jpg");
+  transform: rotateY(180deg) translateZ(125px);
+}
+
+@keyframes rotate-cube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+
+    transform: rotateY(-90deg);
+  }
+  40% {
+
+    transform: rotateX(-90deg);
+  }
+  60% {
+
+    transform: rotateY(90deg);
+  }
+  80% {
+
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
 }

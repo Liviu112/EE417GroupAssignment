@@ -31,16 +31,67 @@
                 <p>Goods</p>
             </div>
 
-            <br>
-            <br>
+            <div class="row">
+  				<div class="col-md-12">&nbsp</div>
+  				<div class="col-md-12">&nbsp</div>
+  				<div class="col-md-12">&nbsp</div>
+		    </div>
 
-            <ul class="wrapbox-bottom">
-                <li>
-                    <p><img src="Images-Products/flowers/roses/3526860692_4c551191b1_m.jpg" alt="">
-                    <span style="width:200px; padding:35px;"> The Garden Center is the best shop in the world  The Garden Center is the best shop in the world  The Garden Center is the best shop in the world  The Garden Center is the best shop in the world  </span></p>
-                </li>
+		    <div class="row">
+  				<div class="col-md-2">&nbsp</div>
+  				<div class="col-md-4"><p style="text-align: left">Home / Products / Daisy 2 </p></div>
+  				<div class="col-md-4"><p style="text-align: right"><-Prev | Next-></p></div>
+  				<div class="col-md-2">&nbsp</div>
+		    </div>
 
-            </ul>
+		<div class="row">
+  				<div class="col-md-2">&nbsp</div>
+  				<div class="col-md-4"><img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg" width="100%" alt=""></div>
+
+                <div class="col-md-4"><h2 style="text-align: left">Daisy Number 2 5lt</h2>
+  		            <p style="text-align: left">€8.95Price</p>
+  		            <p style="text-align: left">Quantity</p>
+  		                <div class="row">
+  			                <div class="col-md-4">
+  				                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">-</button>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">+</button>
+                                    </span>
+                                </div>
+                            </div>
+ 				            <div class="col-md-8"></div>					
+                        </div>
+ 
+			        <div class="row">
+  			            <div class="col-md-12">&nbsp</div>
+			        </div>
+
+			        <div class="row">
+  			            <div class="col-md-8"><button type="button" class="btn btn-primary btn-lg" style="background: #332C2C; border-color:#332C2C; " 
+  				            >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Add to cart&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button>
+                        </div>
+  			            <div class="col-md-4"></div>
+			        </div> 
+                </div>
+  		    <div class="col-md-2">&nbsp</div>
+		</div>
+        <div class="row">
+  		    <div class="col-md-12">&nbsp</div>
+  		        <div class="col-md-12">&nbsp</div>
+  		        <div class="col-md-12">
+			        <div class="row">
+  		            <div class="col-md-2">&nbsp</div>
+  		                <div class="col-md-4">
+			                <p style="text-align: left">Other common namesrose 'Daisy Number Two' Family Daisy Number two can be deciduous or semi-evergreen shrubs or scrambling climbers, with usually thorny stems bearing compound pinnate leaves and solitary or clustered flowers. Flowers may be followed by showy red or purple fruits in some varieties. Horticultural GroupClimbing roses are vigorous shrubs with thorny stems and large, solitary or clustered, often fragrant</p>
+			            </div>
+  		                <div class="col-md-6"></div>
+		            </div>
+			    </div>
+		</div>
         </div>
 
    <jsp:include page="footer_menu.jsp" />
