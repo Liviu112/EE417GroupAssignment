@@ -10,6 +10,7 @@
 <meta name="description" content="" />
 <link rel="stylesheet" type="text/css" href="CSS/loader.css" />
 <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="CSS/style2.css" /> -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu"
 	rel="stylesheet">
 <!-- CSS Stylesheets -->

@@ -10,6 +10,7 @@
         <meta name="description" content="" />
         <link rel="stylesheet" type="text/css" href="CSS/loader.css" />
         <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="CSS/style2.css" /> -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
         <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,7 +24,7 @@
     </head>
     <body>
     	<!------ featured products ------>
-       <jsp:include page="menu.jsp" />
+        <jsp:include page="menu.jsp" />
 
             <div class="cona" style="margin-left: 0%; margin-right: 0%; ">
                 <div class="wrapbox-top">
