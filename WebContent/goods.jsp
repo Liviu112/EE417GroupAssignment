@@ -21,11 +21,13 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    	
     </head>
 
     <body>
         <!------ featured products ------>
         <jsp:include page="menu.jsp" />
+        <script src="js/basket.js"></script>
 
         <div class="conc" style="margin-left: 0%; margin-right: 0%; ">
           <div class="wrapbox-top">
@@ -58,11 +60,11 @@
           <div class="col-md-4">
             <div class="input-group">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">-</button>
+                <button class="btn btn-default"  onclick="decrements()" type="button">-</button>
               </span>
-              <input type="text" class="form-control" placeholder="1">
+              <input type="text" class="form-control" id="input_number" placeholder="0">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">+</button>
+                <button class="btn btn-default"  onclick="increments()" type="button">+</button>
               </span>
             </div>
           </div>      
@@ -73,7 +75,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-8"><a href="cart.jsp"><button type="button" class="btn btn-primary btn-lg" style="background: #332C2C; border-color:#332C2C; " >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Add to cart &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button>
+          <div class="col-md-8"><a> <!--href="cart.jsp"--></a><button type="button" onclick="addtocart('<%= 114 %>')" class="btn btn-primary btn-lg" style="background: #332C2C; border-color:#332C2C; " >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Add to cart &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button>
           </div>
         </div>
       </div>

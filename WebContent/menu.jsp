@@ -1,6 +1,10 @@
- <section class="colored-section" id="title">
+<%@ page import = "java.io.*,java.util.*" %>
+
+<script src="js/index.js"></script>
+
+ <section class="colored-section" id="title" >
    <% HttpSession sess = request.getSession(false);%>
-            <div class="container-fluid" style="padding-top: 40px;padding-bottom: 0px;">
+            <div class="container-fluid" style="padding-top: 40px;padding-bottom: 0px;" onload="loadbasket()">
                 <!-- Nav Bar -->
                 <nav class="navbar navbar-expand-lg navbar-dark">
 					<div class="logo">
@@ -24,6 +28,24 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="about.jsp">ABOUT</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cart.jsp"><span id="bask">Items:  
+                                <script type="text/javascript">
+                                
+                                	if(sessionStorage.getItem("basket")==null)
+                                	{
+                                		document.write("0")
+                                	}
+                                	else
+                                	{
+                                		basket  = sessionStorage.getItem("basket")
+                                		document.write(basket)
+                                	}
+	                                
+	                                
+                                </script>
+                                </span> <ion-icon name="basket"><ion-icon></a>
+                            </li>
                             <!-- If the user is logged in -->
                             <% if(sess.getAttribute("User")!=null){%>
                             <li class="nav-item">
@@ -43,8 +65,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="registration.jsp"></a>
                             </li>
+
                         </ul>
                     </div>
                 </nav>
             </div>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
         </section>
