@@ -24,12 +24,13 @@ CREATE TABLE Marketing (
   LastEntryRefresh varchar(15) DEFAULT NULL
 );
 
-CREATE TABLE CustomersAcc (
-  CustomerID int NOT NULL,
-  Username varchar(20) NOT NULL,
-  Pass varchar(20) NOT NULL,
-  LastChangeDate varchar(15) NOT NULL,
-  AccType varchar(20) NOT NULL
+CREATE TABLE `customersacc` (
+  `CustomerID` int NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `Pass` varchar(20) NOT NULL,
+  `LastChangeDate` varchar(70) NOT NULL,
+  `AccType` varchar(20) NOT NULL,
+  PRIMARY KEY (`CustomerID`)
 );
 
 CREATE TABLE ProductsInformation (
