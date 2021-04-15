@@ -19,7 +19,6 @@ import java.sql.*;
 @WebServlet("/loginServlet")
 public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private int userID = -1;
 	private HttpSession session;
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -39,8 +38,12 @@ public class loginServlet extends HttpServlet {
 		session = request.getSession();
 
 		// check if the user is part of the db 
-		/*int userAuthentication = checkDbForUser(request);
+		int userAuthentication = checkDbForUser(request);
 		System.out.println(userAuthentication);
+		
+		// check if the user wants to be remembered
+		setupCookies.createCookies(request,response);
+		
 		System.out.println("Who loged in: ");
 		System.out.println("User: " + session.getAttribute("User") + 
 						   "\nCustomerID: " + session.getAttribute("CustomerID") + 
@@ -58,7 +61,7 @@ public class loginServlet extends HttpServlet {
 		}
 		// send the errors to the signin page
 		RequestDispatcher rd = request.getRequestDispatcher("signin.jsp");
-		rd.include(request, response);*/
+		rd.include(request, response);
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
@@ -79,18 +82,19 @@ public class loginServlet extends HttpServlet {
 		String Password = "";
 
 		// check if the user was logged in before
-		if (this.getServletConfig().getServletContext().getAttribute("username") != null) {
-			Username = this.getServletConfig().getServletContext().getAttribute("username").toString();
+		if (this.getServletConfig().getServletContext().getAttribute("Username") != null) {
+			Username = this.getServletConfig().getServletContext().getAttribute("Username").toString();
 		} else if (Username.isEmpty())
 			Username = request.getParameter("username");
 		System.out.println("This is the username " + Username);
+		
 		// check if the user was logged in before
-		if (this.getServletConfig().getServletContext().getAttribute("password") != null) {
-			Password = this.getServletConfig().getServletContext().getAttribute("password").toString();
+		if (this.getServletConfig().getServletContext().getAttribute("Password") != null) {
+			Password = this.getServletConfig().getServletContext().getAttribute("Password").toString();
 		} else if (Password.isEmpty())
 			Password = request.getParameter("password");
-		
 		System.out.println("This is the passward " + Password);
+		
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -108,9 +112,9 @@ public class loginServlet extends HttpServlet {
 						if (Password.equals(rs.getString("Pass"))) {
 							session.setAttribute("CustomerID", rs.getInt("CustomerID"));
 							session.setAttribute("User", rs.getString("Username"));
+							session.setAttribute("Pass", rs.getString("Pass"));
 							session.setAttribute("UserType", rs.getString("AccType"));
-							
-							// TO DO Check if the user wants to be saved 
+				
 							return 0;
 						} else {
 							return -1;
