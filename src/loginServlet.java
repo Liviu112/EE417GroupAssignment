@@ -37,13 +37,15 @@ public class loginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// get the session
 		session = request.getSession();
+
 		// check if the user is part of the db 
-		int userAuthentication = checkDbForUser(request);
+		/*int userAuthentication = checkDbForUser(request);
 		System.out.println(userAuthentication);
 		System.out.println("Who loged in: ");
 		System.out.println("User: " + session.getAttribute("User") + 
 						   "\nCustomerID: " + session.getAttribute("CustomerID") + 
 						   "\nUserType: " + session.getAttribute("UserType"));
+		
 		// 0 means the password and username matched 
 		if (userAuthentication == 0)
 			response.sendRedirect("index.jsp"); // redirect the user to the index page and print the new menu 
@@ -56,7 +58,9 @@ public class loginServlet extends HttpServlet {
 		}
 		// send the errors to the signin page
 		RequestDispatcher rd = request.getRequestDispatcher("signin.jsp");
-		rd.include(request, response);
+		rd.include(request, response);*/
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -90,25 +94,12 @@ public class loginServlet extends HttpServlet {
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-		String JDBCUrl = "jdbc:mysql://localhost:3306/thegardencenterdatabase";
-		String username = "root";
-		String password = "";
-		
-		  try {
-	            System.out.println("\nConnecting to the SSD Database......");
-	            Class.forName("com.mysql.jdbc.Driver");
-	            con = DriverManager.getConnection(JDBCUrl, username, password);
-	        }
-	        catch (Exception e) {
-	            System.out.println("\nAn error has occurred during the connection phase!  This is most likely due to your CLASSPATH being set wrong and the"
-	                    + "  classes unable to be found.  Otherwise the database itself may be down.  Try telneting to port 3306 and see if it is up!");
-	            e.printStackTrace();
-	            System.exit(0);
-	        }
+		con = connectionInfo.connectToDB();
+
 
 		  try {
 			  System.out.println("\nConnection Successful..... creating statement....");
-		     	    stmt = con.createStatement();
+		     	 stmt = con.createStatement();
 			     rs = stmt.executeQuery("SELECT * FROM thegardencenterdatabase.customersacc");
 			     // find the user in the db
 			     while (rs.next())

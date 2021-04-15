@@ -51,7 +51,7 @@
 	                                <button class="login" style="outline: none;" onclick="loginServlet" type="submit">LOGIN</button>
 	                            </p>
 								<p>
-									<input type="checkbox">Remember me	
+									<input type="checkbox" name = "RememberMe">Remember me	
 								</p>
 								<p>
 	                                <a class="" href="reset.jsp">LOST OR FORGET PASSWORD?</a>
