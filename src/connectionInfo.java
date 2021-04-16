@@ -5,7 +5,7 @@ public class connectionInfo {
 	public static Connection connectToDB() {
         //Information for db
         Connection con = null;
-        String JDBCUrl = "jdbc:mysql://localhost:3306/assignment4";
+        String JDBCUrl = "jdbc:mysql://localhost:3306/TheGardenCenterDataBase";
         String username = "liv";
         String password = "";
 

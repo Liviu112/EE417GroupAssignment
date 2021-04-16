@@ -1,4 +1,5 @@
 
+import helpers.Date;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -6,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,8 +39,14 @@ public class registrationServlet extends HttpServlet {
 				session = request.getSession();
 				System.out.println("Registration test");
 				// check if the user is part of the db 
-				int userAuthentication = addRegisterFormToDb(request);
-			
+				String Status = addRegisterFormToDb(request);
+				if(Status.equals("error"))
+					request.setAttribute("error", "Username already exists.");
+				if(Status.equals("success"))
+					request.setAttribute("status", "The form was succesfuly submited.");
+				
+				RequestDispatcher rd = request.getRequestDispatcher("registration.jsp");
+				rd.include(request, response);
 	}
 
 	/**
@@ -51,7 +57,7 @@ public class registrationServlet extends HttpServlet {
 		doGet(request, response);
 	}
 	
-	protected int addRegisterFormToDb(HttpServletRequest request) {
+	protected String addRegisterFormToDb(HttpServletRequest request) {
 			// set connection info	
 			Connection con = null;
 			Statement stmt = null;
@@ -65,7 +71,7 @@ public class registrationServlet extends HttpServlet {
 			String Phone = request.getParameter("phone");
 			String Email = request.getParameter("email");
 			String Postal = request.getParameter("postal");
-		    var d = new Date();
+
 			  try {
 				  System.out.println("\nConnection Successful..... creating statement....");
 			     	 stmt = con.createStatement();
@@ -77,7 +83,7 @@ public class registrationServlet extends HttpServlet {
 					    	 System.out.println("the " + rs.getInt("CustomerID"));
 					    	 CustomerID = rs.getInt("CustomerID");
 					    	 if(Username.equals(rs.getString("Username")))
-					    		 return -1;
+					    		 return "error";
 					     }
 
 					// insert the new user 
@@ -86,7 +92,7 @@ public class registrationServlet extends HttpServlet {
 						pstmt.setInt(1, CustomerID+1);
 						pstmt.setString(2, Username);
 						pstmt.setString(3, Password);
-						pstmt.setString(4, d.toString());
+						pstmt.setString(4, Date.getTime());
 						pstmt.setString(5, "normal");
 						pstmt.executeUpdate();
 				     
@@ -99,7 +105,7 @@ public class registrationServlet extends HttpServlet {
 				     }
 			            System.exit(0);
 			        }
-			  return -2;
+			  return "success";
 		}
 	
 }

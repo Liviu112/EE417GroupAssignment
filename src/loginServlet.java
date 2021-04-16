@@ -62,8 +62,6 @@ public class loginServlet extends HttpServlet {
 		// send the errors to the signin page
 		RequestDispatcher rd = request.getRequestDispatcher("signin.jsp");
 		rd.include(request, response);
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
