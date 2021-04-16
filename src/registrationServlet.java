@@ -85,17 +85,34 @@ public class registrationServlet extends HttpServlet {
 					    	 if(Username.equals(rs.getString("Username")))
 					    		 return "error";
 					     }
-
+					
+					CustomerID++;
 					// insert the new user 
 					PreparedStatement pstmt = con.prepareStatement("INSERT INTO thegardencenterdatabase.customersacc (CustomerID,Username,Pass,LastChangeDate,AccType) VALUES (?,?,?,?,?)");
 						pstmt.clearParameters();       // Clears any previous parameters
-						pstmt.setInt(1, CustomerID+1);
+						pstmt.setInt(1, CustomerID);
 						pstmt.setString(2, Username);
 						pstmt.setString(3, Password);
 						pstmt.setString(4, Date.getTime());
 						pstmt.setString(5, "normal");
 						pstmt.executeUpdate();
 				     
+					rs = stmt.executeQuery("SELECT * FROM thegardencenterdatabase.customersinformation");
+
+					// insert the new user 
+					pstmt = con.prepareStatement("INSERT INTO thegardencenterdatabase.customersinformation (CustomerID, FirstName, Surname, Email, MobileNumber, Address, Eircode, Town, County, LastEnteryDate) VALUES (?,?,?,?,?,?,?,?,?,?)");
+						pstmt.clearParameters();       // Clears any previous parameters
+						pstmt.setInt(1, CustomerID);
+						pstmt.setString(2, "First Name");
+						pstmt.setString(3, "Surname");
+						pstmt.setString(4, Email);
+						pstmt.setString(5, Phone);
+						pstmt.setString(6, "Address");
+						pstmt.setString(7, Postal);
+						pstmt.setString(8, "Town");
+						pstmt.setString(9, "County");
+						pstmt.setString(10, Date.getTime());
+					pstmt.executeUpdate();
 			  }
 			        catch (SQLException e) {
 				     System.out.println("\nAn error has occurred during the Statement/ResultSet phase.  Please check the syntax and study the Exception details!");
