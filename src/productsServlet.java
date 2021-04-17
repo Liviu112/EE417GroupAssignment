@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import helpers.Date;
+import helpers.connectionInfo;
 
 /**
  * Servlet implementation class productsServlet
