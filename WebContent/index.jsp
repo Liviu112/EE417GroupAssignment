@@ -27,7 +27,7 @@
     <!------ featured products ------>
         <jsp:include page="menu.jsp" />
         
-    <body onload="loadbasket()">
+    <body>
 		
             <div class="cona" style="margin-left: 0%; margin-right: 0%; ">
                 <div class="wrapbox-top">

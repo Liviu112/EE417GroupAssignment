@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,15 +25,16 @@
     	
     </head>
 
-    <body>
+    <body >
         <!------ featured products ------>
         <jsp:include page="menu.jsp" />
-        <script src="js/basket.js"></script>
-
+        
+		<% HttpSession sess = request.getSession(false);%>
         <div class="conc" style="margin-left: 0%; margin-right: 0%; ">
           <div class="wrapbox-top">
             <p>Goods</p>
           </div>
+          
 
           <div class="row">
   				  <div class="col-md-12">&nbsp</div>
@@ -52,7 +54,7 @@
             <div class="col-md-4"><img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg" width="100%" alt="">         
           </div>
 
-          <div class="col-md-4"><h2 style="text-align: left">Daisy Number 2 5lt</h2>
+          <div class="col-md-4"><h2 style="text-align : left">Daisy Number 2 5lt</h2>
           <p style="text-align: left">€8.95 Price</p>
           <p style="text-align: left">Quantity</p>
 
@@ -69,17 +71,42 @@
             </div>
           </div>      
         </div>
- 
+ 		
+ 		
+ 		
         <div class="row">
           <div class="col-md-12">&nbsp</div>
         </div>
-
+ 		<% if(sess.getAttribute("User")!=null){%> 
         <div class="row">
-          <div class="col-md-8"><a> <!--href="cart.jsp"--></a><button type="button" onclick="addtocart('<%= 114 %>')" class="btn btn-primary btn-lg" style="background: #332C2C; border-color:#332C2C; " >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Add to cart &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button>
+        	 
+        	 <!-- Here data to retrieve from mysql for the basket -->
+        	 <!-- fill in the fields below according to the article opened on the page -->
+        	<% String namm="black"; %>
+        	<% int idd=18; %>
+        	<% int pricee=8; %>
+        	
+           <span id="nameflower" style="display:none;"><%= namm %></span> 
+           <span id="idflower" style="display:none;"><%= idd %></span> 
+           <span id="priceflower" style="display:none;"><%= pricee %></span> 
+           
+              	
+          <div class="col-md-8"><a class="add-cart cart1"><button type="button" onclick='main()' class="btn btn-primary btn-lg" style="background: #332C2C; border-color:#332C2C; " >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Add to cart &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button></a>
           </div>
         </div>
+         <% } 
+         else {%>	
+ 			  		 		
+          <div class="row">
+           <div class="col-md-8"><a class="add-cart" href="signin.jsp"><button type="button" class="btn btn-primary btn-lg"  style="background: #332C2C; border-color:#332C2C; " >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Add to cart &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button> </a>
+           </div>
+         </div>
+         
+         <%};%>
+        
+        
       </div>
-
+		
       <div class="row">
         <div class="col-md-12">&nbsp</div>
         <div class="col-md-2">&nbsp</div>
@@ -88,7 +115,8 @@
         </div>
       </div>
   
+  		<script src="js/index.js"></script>
       <jsp:include page="footer_menu.jsp" />
-
+	
     </body>
 </html>

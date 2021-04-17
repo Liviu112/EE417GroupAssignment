@@ -1,6 +1,5 @@
 <%@ page import = "java.io.*,java.util.*" %>
 
-<script src="js/index.js"></script>
 
  <section class="colored-section" id="title" >
    <% HttpSession sess = request.getSession(false);%>
@@ -28,25 +27,32 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="about.jsp">ABOUT</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="cart.jsp"><span id="bask">Items:  
-                                <script type="text/javascript">
-                                
-                                	if(sessionStorage.getItem("basket")==null)
-                                	{
-                                		document.write("0")
-                                	}
-                                	else
-                                	{
-                                		basket  = sessionStorage.getItem("basket")
-                                		document.write(basket)
-                                	}
-	                                
-	                                
-                                </script>
+                            <% if(sess.getAttribute("User")!=null){%>
+                            <li class="nav-item bask" >
+                                <a class="nav-link" href="cart.jsp"><span id="bask">Items: 
+                                 <script type="text/javascript">   	
+                                 	if(localStorage.getItem("cartNumbers")==null)
+                                 	{
+                                 		document.write("0")
+                                 	}
+                                  	else
+                                  	{
+                                  		
+                                  		basket  = localStorage.getItem("cartNumbers");
+                                  		document.write(basket);
+                                  	} 
+                                 </script> 
                                 </span> <ion-icon name="basket"><ion-icon></a>
                             </li>
-                            <!-- If the user is logged in -->
+                            <% } else {%>
+                            <li class="nav-item bask">
+                                <a class="nav-link" href="signin.jsp"><span id="bask">Items: 
+                                <script type="text/javascript"> document.write("0")  </script> 
+                                </span> <ion-icon name="basket"><ion-icon></a>
+                            </li>   
+                            <%};%>
+                            
+                             <!-- If the user is logged in -->
                             <% if(sess.getAttribute("User")!=null){%>
                             <li class="nav-item">
                              	<!-- TO DO  -->
