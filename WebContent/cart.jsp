@@ -49,7 +49,6 @@
 
 		    </div>
         
-        
         <div class="row" >
         <div class="left" style="min-width:1500px;padding-left:250px;float:left;">
 
@@ -77,7 +76,6 @@
             <div class="right" style="padding-left:200px;min-width:2000px;display:flex;">
   				  <div class="col-md-3">
   				  
-  				  	
   				    <div class="row" style="border-top: thin solid #666">
   					    <div class="col-md-4"></div>
  					      <div class="col-md-8"></div>

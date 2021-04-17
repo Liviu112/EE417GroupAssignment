@@ -38,15 +38,21 @@
 
           <div class="row">
   				  <div class="col-md-12">&nbsp</div>
-  				  <div class="col-md-12">&nbsp</div>
-  				  <div class="col-md-12">&nbsp</div>
 		      </div>
 
 		      <div class="row">
   				  <div class="col-md-2">&nbsp</div>
-  				  <div class="col-md-4"><p style="text-align: left">Home / Products / Daisy 2 </p></div>
-  				  <div class="col-md-4"><p style="text-align: right"><-Prev | Next-></p></div>
-  			  	<div class="col-md-2">&nbsp</div>
+
+            <a href="index.jsp" style="color: #000">Home</a>&nbsp&nbsp&nbsp
+            <a href="products.jsp" style="color: #000">Products</a>&nbsp&nbsp&nbsp
+            <a href="goods.jsp" style="color: #000">Daisy 2</a>&nbsp&nbsp&nbsp
+
+  			  	<div class="col-md-6">&nbsp</div>
+
+            <a href="goods.jsp" style="color: #000">-Prev</a>&nbsp&nbsp&nbsp
+            <a href="goods.jsp" style="color: #000">Next-</a>
+            <div class="col-md-2">&nbsp</div>
+            <div class="col-md-2">&nbsp</div>
 		      </div>
 
           <div class="row">
