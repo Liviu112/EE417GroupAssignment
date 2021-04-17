@@ -63,7 +63,6 @@
                       </span>
                     </div>
                   </div>
-  					      <div class="col-md-2">€8.95</div>
 				      </div>
             </div>
   				  <div class="col-md-3"><p style="text-align: left">Subtotal €8.95</p>
