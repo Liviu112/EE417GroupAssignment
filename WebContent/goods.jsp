@@ -82,8 +82,8 @@
         	 
         	 <!-- Here data to retrieve from mysql for the basket -->
         	 <!-- fill in the fields below according to the article opened on the page -->
-        	<% String namm="black"; %>
-        	<% int idd=18; %>
+        	<% String namm="calendula"; %>
+        	<% int idd=2; %>
         	<% int pricee=8; %>
         	
            <span id="nameflower" style="display:none;"><%= namm %></span> 

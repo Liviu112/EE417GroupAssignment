@@ -132,8 +132,8 @@ function displayCart()
 			{
 				productContainer.innerHTML += '<div class="product" style="padding-left:600px;margin-left:+500px;margin-bottom:30px;">';
 			 	productContainer.innerHTML += '<ion-icon name="ellipse-sharp" ></ion-icon>';
-	//			productContainer.innerHTML += '<img src="./Images-Products/mix/${item.tag}.jpg">';
-				productContainer.innerHTML += '<img src="./Images-Products/flowers/mix/abutilon.jpg" style="max-width:100px;">';
+				productContainer.innerHTML += '<img src="./Images-Products/flowers/mix/'+item.name+'.jpg" style="max-width:100px;">';
+				console.log(productContainer);
 				productContainer.innerHTML += '<span">'+item.name+'</span></div>';			
 				i=(item.price);
 				productContainer.innerHTML += '<span style="padding-left:130px;padding-right:100px;">$'+i+',00</span>';	
@@ -141,6 +141,8 @@ function displayCart()
 				i=(item.inCart)*(item.price);
 				productContainer.innerHTML += '<span style="padding-left:150px;">$'+i+',00</span>';	
 				productContainer.innerHTML += '</div>';	
+				
+				
 			}	
 			
 			
