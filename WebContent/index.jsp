@@ -27,7 +27,8 @@
     <!------ featured products ------>
         <jsp:include page="menu.jsp" />
         
-    <body>
+ 	    <script src="js/effect_loader.js"></script>
+	    <div id="loader"></div>
 		
             <div class="cona" style="margin-left: 0%; margin-right: 0%; ">
                 <div class="wrapbox-top">
@@ -64,7 +65,7 @@
 
                 <div class="col-md-4">
                     <h3>Safer Shopping at Garden Center</h3>
-                    <p style="text-align: left">Our product range has also expanded to include an award winning seed range, young plants, bulbs, seed potatoes, onions and  garlic sets, soft fruit and fruit trees as well as an extensive range of gardening supplies. All have been carefully selected through stringent testing and trials to make gardening a pleasure and a success for our customers. In addition, we also offer a wonderful range of Christmas gifts sent with a personalised card to both the gardeners and non gardeners in your life!.</p>
+                    <p style="text-align: left">Our product range has also expanded to include an award winning seed range, young plants, bulbs, seed potatoes, onions and  garlic sets, soft fruit and fruit trees as well as an extensive range of gardening supplies. All have been carefully selected through stringent testing and trials to make gardening a pleasure and a success for our customers. In addition, we also offer a wonderful range of Christmas gifts sent with a personalised card to both the gardeners and non gardeners in your life!</p>
 
                     <p style="text-align: left">Following the Covid-19 pandemic, we had to temporarily close our charity shops and cancel traditional fundraising events which has had a major impact on our ability to generate funds.</p>
                 </div>

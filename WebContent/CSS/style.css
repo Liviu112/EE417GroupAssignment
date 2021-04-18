@@ -57,13 +57,13 @@ p {
 }
 
 .nav-item {
-    padding: 0 10px;
     width: 120px;
     font-weight: bold;
+    background:	#FF8C00;
 }
 
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: "Ubuntu";
     color :#FF8C00;
 }
