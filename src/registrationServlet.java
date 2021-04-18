@@ -1,6 +1,8 @@
 
 import helpers.Date;
+
 import helpers.connectionInfo;
+import helpers.validationForm;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -38,14 +40,25 @@ public class registrationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// get the session
 				session = request.getSession();
-				System.out.println("Registration test");
+				System.out.println("Registration");
 				// check if the user is part of the db 
-				String Status = addRegisterFormToDb(request);
-				if(Status.equals("error"))
-					request.setAttribute("error", "Username already exists.");
-				if(Status.equals("success"))
-					request.setAttribute("status", "The form was succesfuly submited.");
-				
+				if (validationForm.passwordsMatch(request) == false)
+					request.setAttribute("error", "The passwords do not match.");
+				else if (validationForm.validEmail(request) == false)
+					request.setAttribute("error", "Invalid email, the email should contain @ .");
+				else
+				{
+					String Status = addRegisterFormToDb(request);
+					if(Status.equals("error_username"))
+						request.setAttribute("error", "Username is taken exists.");
+					else if(Status.equals("error_email"))
+						request.setAttribute("error", "Email is used already.");
+					else if(Status.equals("error_phone"))
+						request.setAttribute("error", "The Phone no. is used already.");
+					
+					else if(Status.equals("success"))
+						request.setAttribute("status", "The form was succesfuly submited.");
+				}
 				RequestDispatcher rd = request.getRequestDispatcher("registration.jsp");
 				rd.include(request, response);
 	}
@@ -84,9 +97,19 @@ public class registrationServlet extends HttpServlet {
 					    	 System.out.println("the " + rs.getInt("CustomerID"));
 					    	 CustomerID = rs.getInt("CustomerID");
 					    	 if(Username.equals(rs.getString("Username")))
-					    		 return "error";
+					    		 return "error_username";
 					     }
-					
+					   
+					   rs = stmt.executeQuery("SELECT * FROM thegardencenterdatabase.customersinformation");
+					   
+				    	// check if the email exists, and get the last user ID
+					     while (rs.next())
+					     {  
+					    	 if(Email.equals(rs.getString("Email")))
+					    		 return "error_email";
+					    	 if(Phone.equals(rs.getString("MobileNumber")))
+					    		 return "error_phone";
+					     }
 					CustomerID++;
 					// insert the new user 
 					PreparedStatement pstmt = con.prepareStatement("INSERT INTO thegardencenterdatabase.customersacc (CustomerID,Username,Pass,LastChangeDate,AccType) VALUES (?,?,?,?,?)");

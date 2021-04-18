@@ -65,7 +65,6 @@ public class productsServlet extends HttpServlet {
 		String Maturity = "Maturity";
 		int Availability = 100;
 		
-
 		  try {
 			  System.out.println("\nConnection Successful..... creating statement....");
 		     	 stmt = con.createStatement();

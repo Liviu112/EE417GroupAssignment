@@ -50,8 +50,7 @@
                             <% if(sess.getAttribute("User")!=null){%>
                             <li class="nav-item">
                              	<!-- TO DO  -->
-                                <a class="nav-link" href="logoutServlet"><%=sess.getAttribute("User").toString()%>
-                                 <%=sess.getAttribute("CustomerID").toString()%></a> 
+                                <a class="nav-link" href="logoutServlet">Log out <%=sess.getAttribute("User").toString()%>
                             </li>
                             <% } else {%>
                             <!-- else show the register or log in options -->

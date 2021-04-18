@@ -7,7 +7,7 @@ public class connectionInfo {
         //Information for db
         Connection con = null;
         String JDBCUrl = "jdbc:mysql://localhost:3306/TheGardenCenterDataBase";
-        String username = "liv";
+        String username = "root";
         String password = "";
 
         //Connect to DB
