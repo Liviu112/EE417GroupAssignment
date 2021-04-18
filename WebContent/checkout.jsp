@@ -26,6 +26,9 @@
     <body>
         <!------ featured products ------>
         <jsp:include page="menu.jsp" />
+        
+        <script src="js/effect_loader.js"></script>
+	    <div id="loader"></div>
 
         <div class="&nbsp" style="margin-left: 0%; margin-right: 0%; ">
           <div class="wrapbox-top">
@@ -38,7 +41,7 @@
 		      </div>
           
           <div class="row">
-  				<div class="col-md-2"></div>
+  				<div class="col-md-4"></div>
   				<div class="col-md-4">
 				  <div class="row">
   				<div class="col-md-12"><h3 style="text-align: left">1. Shopping Details</h3></div>

@@ -23,12 +23,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
     <body>
-        <!------ featured products ------>
-        <section class="colored-section" id="title">
-            <div class="container-fluid" style="padding-top: 40px;padding-bottom: 0px;">
-                <!-- Nav Bar -->
-               <jsp:include page="menu.jsp" />
-
+        <jsp:include page="menu.jsp" />
         <div class="conb" style="margin-left: 0%; margin-right: 0%; ">
 			<div class="wrapbox-top">
 				<p>Reset Password</p>
