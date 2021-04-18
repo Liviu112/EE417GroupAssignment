@@ -61,7 +61,7 @@
           </div>
 
           <div class="col-md-4"><h2 style="text-align : left">Daisy Number 2 5lt</h2>
-          <p style="text-align: left">€8.95 Price</p>
+          <p style="text-align: left">8.95 Price</p>
           <p style="text-align: left">Quantity</p>
 
         <div class="row">

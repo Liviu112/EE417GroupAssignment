@@ -28,6 +28,9 @@
     <body >
         <!------ featured products ------>
         <jsp:include page="menu.jsp" />
+        
+        <script src="js/effect_loader.js"></script>
+	    <div id="loader"></div>
 		
         <div class="&nbsp" style="margin-left: 0%; margin-right: 0%; ">
             <div class="wrapbox-top">
