@@ -12,7 +12,7 @@ CREATE TABLE CustomersInformation (
   Eircode varchar(10) DEFAULT NULL,
   Town varchar(15) DEFAULT NULL,
   County varchar(10) DEFAULT NULL,
-  LastEnteryDate varchar(12) NOT NULL
+  LastEnteryDate varchar(30) NOT NULL
 );
 
 CREATE TABLE Marketing (
@@ -21,15 +21,16 @@ CREATE TABLE Marketing (
   MannerOfContac varchar(15) DEFAULT NULL,
   LastChangeDate varchar(15) DEFAULT NULL,
   LastContactDate varchar(20) DEFAULT NULL,
-  LastEntryRefresh varchar(15) DEFAULT NULL
+  LastEntryRefresh varchar(30) DEFAULT NULL
 );
 
-CREATE TABLE CustomersAcc (
-  CustomerID int NOT NULL,
-  Username varchar(20) NOT NULL,
-  Pass varchar(20) NOT NULL,
-  LastChangeDate varchar(15) NOT NULL,
-  AccType varchar(20) NOT NULL
+CREATE TABLE `customersacc` (
+  `CustomerID` int NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `Pass` varchar(20) NOT NULL,
+  `LastChangeDate` varchar(70) NOT NULL,
+  `AccType` varchar(20) NOT NULL,
+  PRIMARY KEY (`CustomerID`)
 );
 
 CREATE TABLE ProductsInformation (
@@ -41,7 +42,7 @@ CREATE TABLE ProductsInformation (
   Price double NOT NULL,
   Maturity varchar(15) NOT NULL,
   Availability int NOT NULL, 
-  LastEntryRefresh varchar(13) NOT NULL
+  LastEntryRefresh varchar(30) NOT NULL
 );
 
 CREATE TABLE `transactionshistory` (
@@ -49,7 +50,7 @@ CREATE TABLE `transactionshistory` (
   `CustomerID` int NOT NULL,
   `Quantity` varchar(15) NOT NULL,
   `TotalValue` varchar(20) NOT NULL,
-  `TransactionDate` varchar(15) NOT NULL
+  `TransactionDate` varchar(30) NOT NULL
 );
 
 insert into customersacc (CustomerID, Username, Pass, LastChangeDate, AccType) values(1, "Alex", "Alex", "20/20/2020","normal");

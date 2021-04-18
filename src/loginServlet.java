@@ -1,7 +1,5 @@
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import helpers.connectionInfo;
+
 import java.sql.*;
 
 /**
@@ -19,7 +19,6 @@ import java.sql.*;
 @WebServlet("/loginServlet")
 public class loginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private int userID = -1;
 	private HttpSession session;
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -37,13 +36,19 @@ public class loginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// get the session
 		session = request.getSession();
+
 		// check if the user is part of the db 
 		int userAuthentication = checkDbForUser(request);
 		System.out.println(userAuthentication);
+		
+		// check if the user wants to be remembered
+		setupCookies.createCookies(request,response);
+		
 		System.out.println("Who loged in: ");
 		System.out.println("User: " + session.getAttribute("User") + 
 						   "\nCustomerID: " + session.getAttribute("CustomerID") + 
 						   "\nUserType: " + session.getAttribute("UserType"));
+		
 		// 0 means the password and username matched 
 		if (userAuthentication == 0)
 			response.sendRedirect("index.jsp"); // redirect the user to the index page and print the new menu 
@@ -75,40 +80,28 @@ public class loginServlet extends HttpServlet {
 		String Password = "";
 
 		// check if the user was logged in before
-		if (this.getServletConfig().getServletContext().getAttribute("username") != null) {
-			Username = this.getServletConfig().getServletContext().getAttribute("username").toString();
+		if (this.getServletConfig().getServletContext().getAttribute("Username") != null) {
+			Username = this.getServletConfig().getServletContext().getAttribute("Username").toString();
 		} else if (Username.isEmpty())
 			Username = request.getParameter("username");
 		System.out.println("This is the username " + Username);
+		
 		// check if the user was logged in before
-		if (this.getServletConfig().getServletContext().getAttribute("password") != null) {
-			Password = this.getServletConfig().getServletContext().getAttribute("password").toString();
+		if (this.getServletConfig().getServletContext().getAttribute("Password") != null) {
+			Password = this.getServletConfig().getServletContext().getAttribute("Password").toString();
 		} else if (Password.isEmpty())
 			Password = request.getParameter("password");
-		
 		System.out.println("This is the passward " + Password);
+		
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-		String JDBCUrl = "jdbc:mysql://localhost:3306/thegardencenterdatabase";
-		String username = "root";
-		String password = "";
-		
-		  try {
-	            System.out.println("\nConnecting to the SSD Database......");
-	            Class.forName("com.mysql.jdbc.Driver");
-	            con = DriverManager.getConnection(JDBCUrl, username, password);
-	        }
-	        catch (Exception e) {
-	            System.out.println("\nAn error has occurred during the connection phase!  This is most likely due to your CLASSPATH being set wrong and the"
-	                    + "  classes unable to be found.  Otherwise the database itself may be down.  Try telneting to port 3306 and see if it is up!");
-	            e.printStackTrace();
-	            System.exit(0);
-	        }
+		con = connectionInfo.connectToDB();
+
 
 		  try {
 			  System.out.println("\nConnection Successful..... creating statement....");
-		     	    stmt = con.createStatement();
+		     	 stmt = con.createStatement();
 			     rs = stmt.executeQuery("SELECT * FROM thegardencenterdatabase.customersacc");
 			     // find the user in the db
 			     while (rs.next())
@@ -117,9 +110,9 @@ public class loginServlet extends HttpServlet {
 						if (Password.equals(rs.getString("Pass"))) {
 							session.setAttribute("CustomerID", rs.getInt("CustomerID"));
 							session.setAttribute("User", rs.getString("Username"));
+							session.setAttribute("Pass", rs.getString("Pass"));
 							session.setAttribute("UserType", rs.getString("AccType"));
-							
-							// TO DO Check if the user wants to be saved 
+				
 							return 0;
 						} else {
 							return -1;

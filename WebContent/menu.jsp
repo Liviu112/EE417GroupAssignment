@@ -53,8 +53,7 @@
                              <!-- If the user is logged in -->
                             <% if(sess.getAttribute("User")!=null){%>
                             <li class="nav-item">
-                             	<!-- TO DO  -->
-                                <a class="nav-link" style="color: #000080; background:#FF8C00;" href=""><%=sess.getAttribute("User").toString()%></a> 
+                                <a class="nav-link" style="color: #000080; background:#FF8C00;" href="logoutServlet">Log out <%=sess.getAttribute("User").toString()%></a> 
                             </li>
                             <% } else {%>
                             <!-- else show the register or log in options -->

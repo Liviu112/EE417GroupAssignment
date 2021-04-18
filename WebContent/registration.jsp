@@ -35,8 +35,11 @@
         	</div>
         	<div>
         		<form id="formLogin" method="POST" action="registrationServlet">
+        			
 	        		<ul id="caa" class="formb">
 	        			<li class="fromTitle">
+	        			<span style="color: red;">${error}</span>
+	        			<span style="color: green;">${status}</span>
 	        				<h2>Register</h2>
 	        			</li>
 	        			<li>
