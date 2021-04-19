@@ -16,7 +16,7 @@
                                 <a class="nav-link" style="color: #000080; background:#FF8C00; font-size: 1.3rem;" href="index.jsp">HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" style="color: #000080; background:#FF8C00; width: 115px; font-size: 1.3rem;" href="products.jsp">PRODUCTS</a>
+                                <a class="nav-link" style="color: #000080; background:#FF8C00; width: 115px; font-size: 1.3rem;" href="productsServlet">PRODUCTS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" style="color: #000080; background:#FF8C00; font-size: 1.3rem;" href="contact.jsp">CONTACT</a>
