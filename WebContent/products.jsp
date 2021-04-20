@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.List"%>
+<%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -65,129 +67,26 @@
             </div>
             <div class="col-lg-9"  style="background-color: black;">
                 <div class="row">
+                     <% HttpSession sess = request.getSession(false);
+                         List<String> ProductName = new ArrayList<String>((ArrayList<String>)sess.getAttribute("ProductName"));
+                         List<String> ImageLocation = new ArrayList<String>((ArrayList<String>)sess.getAttribute("ImageLocation"));
+                         List<Float> Price = new ArrayList<Float>((ArrayList<Float>)sess.getAttribute("Price"));
+                         %>
+                         <%for(int i=0; i<21; i++){ %>
                     <div class="col-lg-4  product">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/blue-hibiscus-1.jpg" alt="" >
-                        <h4>Blue Hibiscus</h4>
-                        <p>$50.00</p></a>
+                        <a href="goods.jsp" target="view_window"><img class="p-image" src=<%=ImageLocation.get(i)%> alt="" >
+                         <%if(sess.getAttribute("ProductName")!=null){ %>
+                        <h4><%=ProductName.get(i)%></h4><%} %>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p>$ <%=Price.get(i)%></p></a>
                     </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/abutilon.jpg">
-                        <h4>Abutilon</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/acacia.jpg">
-                        <h4>Acacia Flower</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/balloon-flower.jpg">
-                        <h4>Ballon Flower </h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/bee-balm.jpg">
-                        <h4>Bee Balm</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/bergenia.jpg">
-                        <h4>Bergenia Flower</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/california-poppy.jpg">
-                        <h4>California Poppy </h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/broom.jpg">
-                        <h4>Broom Flower</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/calendula.jpg">
-                        <h4>Calendula</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/cyclamen.jpg">
-                        <h4>Cyclamen Flower</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/canna-lily.jpg">
-                        <h4>Canna Lilly</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/cape-leadwort.jpg">
-                        <h4>Cape Leadwort</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/colorful-pansies.jpg">
-                        <h4>Color Ful Pansies</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/daffodil.jpg">
-                        <h4>Daffodils </h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/desert-rose.jpg">
-                        <h4>Desert Rose </h4>
-                        <p>$50.00</p></a>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/disa-uniflora.jpg">
-                        <h4>Disa Uniflora</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/dotted-pink-cattleya.jpg">
-                        <h4>Dotted Pink Cattleya</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/fall-crocus.jpg">
-                        <h4>Fall crocus</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/forget-me-not-flower.jpg">
-                        <h4>Forget me not Flower</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/four-oclock-flower.jpg">
-                        <h4>Four o Clock Flower</h4>
-                        <p>$50.00</p></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="goods.jsp" target="view_window"><img class="p-image" src="./Images-Products/flowers/mix/flowering-dogwood.jpg">
-                        <h4>Flowering Dodwood</h4>
-                        <p>$50.00</p></a>
-                    </div>
+                    <%}; %>
                 </div>
             </div>
         </div>
