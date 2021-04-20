@@ -30,19 +30,16 @@
  	    <script src="js/effect_loader.js"></script>
 	    <div id="loader"></div>
 		
-            <div class="cona" style="margin-left: 0%; margin-right: 0%; ">
+            <div class="conab" style="margin-left: 0%; margin-right: 0%; ">
                 <div class="wrapbox-top">
-				    <p>Home</p>
+				    <p>Wherever life plants you, bloom with grace</p>
 			    </div>
                 <div class="row">
                     <div class="col-md-12">   
                         <div class="treepage">
                             <div class="treepage-bg" id="treepagebg">
                                 <div class="treepagecontent">
-                                    <div class="treepagetext">
-                                        <h1>Wherever life plants you, bloom with grace</h1>
-                                    </div>
-                                    <a class="btn btn-success btn-lg treepagebtn" href="products.jsp">view our products</a>
+                                    <a class="btn btn-info" style="position: absolute; left: 1180px; top:700px; width:300px; font-size: 24px;" href="products.jsp">view our products</a>
                                 </div>
                             </div>
                         </div>
@@ -63,24 +60,34 @@
 
                 <div class="col-md-2"></div>
 
-                <div class="col-md-4">
-                    <h3>Safer Shopping at Garden Center</h3>
-                    <p style="text-align: left">Our product range has also expanded to include an award winning seed range, young plants, bulbs, seed potatoes, onions and  garlic sets, soft fruit and fruit trees as well as an extensive range of gardening supplies. All have been carefully selected through stringent testing and trials to make gardening a pleasure and a success for our customers. In addition, we also offer a wonderful range of Christmas gifts sent with a personalised card to both the gardeners and non gardeners in your life!</p>
-
-                    <p style="text-align: left">Following the Covid-19 pandemic, we had to temporarily close our charity shops and cancel traditional fundraising events which has had a major impact on our ability to generate funds.</p>
+                <div class="col-md-6" style="color: white">
+                    <h1>Safer Shopping at Garden Center</h1>
+                    <p style="text-align: left; color: white; font-size: 1.5rem; background: #ff523b">Our product range has also expanded to include an award winning seed range, young plants, bulbs, seed potatoes, onions and  garlic sets, soft fruit and fruit trees as well as an extensive range of gardening supplies. All have been carefully selected through stringent testing and trials to make gardening a pleasure and a success for our customers. In addition, we also offer a wonderful range of Christmas gifts sent with a personalised card to both the gardeners and non gardeners in your life!</p>           
                 </div>
 
                 <div class="col-md-2"></div>
 
             <div class="row">
+  		        <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
                 <div class="col-md-12">&nbsp</div>
                 <div class="col-md-12">&nbsp</div>
+  		     	<div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
                 <div class="col-md-12">&nbsp</div>
                 <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
+  			    <div class="col-md-12">&nbsp</div>
                 <div class="col-md-12">&nbsp</div>
             </div>        
 
@@ -89,14 +96,16 @@
                 <div class="col-md-12"> &nbsp</div>
                 <div class="col-md-2"></div>
             
-        <div class="col-md-8">
+          <div class="col-md-8">
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
-                        <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg" width="400" alt="..."><p>Daisy</p></a>
+                        <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg" width="400" alt="...">
+                        <p style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Daisy</p></a>
                     </div>
 
                     <div class="col-xs-6 col-md-6">
-                        <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/dandelion/5600240736_4a90c10579_n.jpg" width="400" alt="..."><p>Dandelion</p></a>
+                        <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/dandelion/5600240736_4a90c10579_n.jpg" width="400" alt="...">
+                        <p style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Dandelion</p></a>
                     </div>
                 </div>
 
@@ -107,14 +116,16 @@
                     
             <div class="row">
                 <div class="col-xs-6 col-md-6">
-                    <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/roses/1469726748_f359f4a8c5.jpg" width="400" alt="..."><p>Rose</p></a>
+                    <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/roses/1469726748_f359f4a8c5.jpg" width="400" alt="...">
+                    <p style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Rose</p></a>
                 </div>
 
                 <div class="col-xs-6 col-md-6">
-                    <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/tulips/8838914676_8ef4db7f50_n.jpg" width="400" alt="..."><p>Tulips</p></a>
+                    <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/tulips/8838914676_8ef4db7f50_n.jpg" width="400" alt="...">
+                    <p style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Tulips</p></a>
                 </div> 
             </div>  
-        </div>
+          </div>
 
 	   <jsp:include page="footer_menu.jsp" />
         

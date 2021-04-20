@@ -36,15 +36,23 @@
         	<div>
         		<form id="formLogin" method="POST" action="registrationServlet">
         			
-	        		<ul id="caa" class="formb">
+	        		<ul id="caa" class="formb" style="height: 1150px;">
 	        			<li class="fromTitle">
 	        			<span style="color: red;">${error}</span>
 	        			<span style="color: green;">${status}</span>
 	        				<h2>Register</h2>
 	        			</li>
 	        			<li>
+	        				<p>FIRSTNAME</p>
+	        			<input type="text" name="firstname" class="ps">
+	        			</li>
+	        			<li>
+	        				<p>SURNAME</p>
+	        			<input type="text" name="surname" class="ps">
+	        			</li>		        			
+	        			<li>	        			
 	        				<p>USER NAME</p>
-	        				<input type="text" name="uname" class="un">
+	        				<input type="text" name="uname" class="ps">
 	        			</li>
 	        			<li>
 	        				<p>PASSWORD</p>
@@ -62,10 +70,22 @@
 							<p>EMAIL ADDRESS</p>
 							<input type="text" name="email" class="ps">
 						</li>
+	        			<li>
+	        				<p>ADDRESS</p>
+	        			<input type="text" name="address" class="ps">
+	        			</li>							
 						<li>
 							<p>POSTAL</p>
 							<input type="text" name="postal" class="ps">
 						</li>
+	        			<li>
+	        				<p>TOWN</p>
+	        			<input type="text" name="town" class="ps">
+	        			</li>
+	        			<li>
+	        				<p>COUNTY</p>
+	        			<input type="text" name="county" class="ps">
+	        			</li>						
 	        			<li>
 	        				<div class="bottomboxa">
 	        					<p><button class="logina" type="submit" style="outline: none;">REGISTER</button></p>
