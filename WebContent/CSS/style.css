@@ -125,6 +125,7 @@ p {
 .footer .containerb{
 	display: flex;
 	line-height: 90px;
+	width: 100%;
 }
 .footer ul{
 	list-style: none;
@@ -268,12 +269,13 @@ textarea{
 }
 
 .wrapbox-bottom{
-	text-align: left;
+	text-align: center;
 	list-style: none;
 	width: 66%;
 	margin:0 auto;
 }
 .wrapbox-bottom p{
+	text-align: center;
 	margin:0;
 }
 .wrapbox-bottom span{
