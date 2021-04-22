@@ -37,17 +37,13 @@
                 <div class="row">
                     <div class="col-md-12">   
                         <div class="treepage">
-                            <div class="treepage-bg" id="treepagebg">
-                                <div class="treepagecontent">
-                                    <a class="btn btn-info" style="position: absolute; left: 1180px; top:700px; width:300px; font-size: 24px;" href="products.jsp">view our products</a>
-                                </div>
-                            </div>
+                            <div class="treepage-bg" id="treepagebg"></div>
                         </div>
                     </div>
                 </div>                   
             </div>
  
-            <div class="row" >
+            <div class="row" style="height: 830px" >
                 <div class="col-md-2"></div>
                     <div class="cube">
                         <div class="img1"></div>
@@ -57,46 +53,17 @@
                         <div class="img5"></div>
                         <div class="img6"></div>
                     </div>
-
+            
                 <div class="col-md-2"></div>
 
                 <div class="col-md-6" style="color: white">
                     <h1>Safer Shopping at Garden Center</h1>
                     <p style="text-align: left; color: white; font-size: 1.5rem; background: #ff523b">Our product range has also expanded to include an award winning seed range, young plants, bulbs, seed potatoes, onions and  garlic sets, soft fruit and fruit trees as well as an extensive range of gardening supplies. All have been carefully selected through stringent testing and trials to make gardening a pleasure and a success for our customers. In addition, we also offer a wonderful range of Christmas gifts sent with a personalised card to both the gardeners and non gardeners in your life!</p>           
+                    <a class="btn btn-info" style="font-size: 24px;" href="products.jsp">view our products</a>
                 </div>
-
-                <div class="col-md-2"></div>
-
-            <div class="row">
-  		        <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-  		     	<div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-  			    <div class="col-md-12">&nbsp</div>
-                <div class="col-md-12">&nbsp</div>
-            </div>        
-
-            <div class="row" style="background-color: #2F2828">
-                <div class="col-md-12"> &nbsp</div>
-                <div class="col-md-12"> &nbsp</div>
-                <div class="col-md-2"></div>
+            </div>
             
-          <div class="col-md-8">
+          <div class="col-md-12" style="background-color: #2F2828; padding-top:50px">
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
                         <a href="products.jsp" class="thumbnail"><img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg" width="400" alt="...">
@@ -108,11 +75,6 @@
                         <p style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Dandelion</p></a>
                     </div>
                 </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                </div>
-            </div>
                     
             <div class="row">
                 <div class="col-xs-6 col-md-6">
