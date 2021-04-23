@@ -63,7 +63,7 @@
 			<li>
 				<p>
 					<img
-						src="Images-Products/flowers/daisy/10172379554_b296050f82_n.jpg"
+						src="Images-Products/flowers/mix/abutilon.jpg"
 						alt=""> <span style="width: 1000px;"> The Garden
 						Center is the best shop in the world The Garden Center is the best
 						shop in the world The Garden Center is the best shop in the world
@@ -90,7 +90,7 @@
 
 			<li>
 				<p>
-					<img src="Images-Products/flowers/daisy/14698531521_0c2f0c6539.jpg"
+					<img src="Images-Products/flowers/mix/acacia.jpg"
 						alt=""> <span style="width: 1000px;"> The Garden
 						Center is the best shop in the world The Garden Center is the best
 						shop in the world The Garden Center is the best shop in the world
@@ -121,7 +121,7 @@
 			<li>
 				<p>
 					<img
-						src="Images-Products/flowers/daisy/3338077096_3a8ed0e2bc_m.jpg"
+						src="Images-Products/flowers/mix/asters.jpg"
 						alt=""> <span style="width: 1000px;"> The Garden
 						Center is the best shop in the world The Garden Center is the best
 						shop in the world The Garden Center is the best shop in the world

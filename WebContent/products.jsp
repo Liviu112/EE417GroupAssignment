@@ -133,11 +133,11 @@
 						id="pimg" src=<%=ImageLocation.get(i)%> alt=""> <%if(sess.getAttribute("ProductName")!=null){ %>
 						<h4><%=ProductName.get(i)%></h4>
 						<%} %>
-						<div class="rating">
+<!-- 						<div class="rating">
 							<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 								class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 								class="fa fa-star-o"></i>
-						</div>
+						</div> -->
 						<p>
 							$
 							<%=Price.get(i)%></p></a>
