@@ -34,7 +34,6 @@
                                  	}
                                   	else
                                   	{
-                                  		
                                   		basket  = localStorage.getItem("cartNumbers");
                                   		document.write(basket);
                                   	} 

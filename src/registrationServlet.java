@@ -85,7 +85,11 @@ public class registrationServlet extends HttpServlet {
 			String Phone = request.getParameter("phone");
 			String Email = request.getParameter("email");
 			String Postal = request.getParameter("postal");
-
+			String FirstName = request.getParameter("firstname");
+			String Surname = request.getParameter("surname");
+			String Address = request.getParameter("address");
+			String Town = request.getParameter("town");
+			String County = request.getParameter("county");
 			  try {
 				  System.out.println("\nConnection Successful..... creating statement....");
 			     	 stmt = con.createStatement();
@@ -127,14 +131,14 @@ public class registrationServlet extends HttpServlet {
 					pstmt = con.prepareStatement("INSERT INTO thegardencenterdatabase.customersinformation (CustomerID, FirstName, Surname, Email, MobileNumber, Address, Eircode, Town, County, LastEnteryDate) VALUES (?,?,?,?,?,?,?,?,?,?)");
 						pstmt.clearParameters();       // Clears any previous parameters
 						pstmt.setInt(1, CustomerID);
-						pstmt.setString(2, "First Name");
-						pstmt.setString(3, "Surname");
+						pstmt.setString(2, FirstName);
+						pstmt.setString(3, Surname);
 						pstmt.setString(4, Email);
 						pstmt.setString(5, Phone);
-						pstmt.setString(6, "Address");
+						pstmt.setString(6, Address);
 						pstmt.setString(7, Postal);
-						pstmt.setString(8, "Town");
-						pstmt.setString(9, "County");
+						pstmt.setString(8, Town);
+						pstmt.setString(9, County);
 						pstmt.setString(10, Date.getTime());
 					pstmt.executeUpdate();
 			  }
