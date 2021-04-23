@@ -1,7 +1,7 @@
 // JS Fade-In Loader
 window.onload = function() {
-	setTimeout(function(){
+	setTimeout(function() {
 		document.getElementById("loader").remove();
-		},1000);
+	}, 1000);
 }
 
