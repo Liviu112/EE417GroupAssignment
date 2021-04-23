@@ -43,23 +43,23 @@
 							<span style="color: red; font-size: 15px; ">${error}</span>
 	        				<span style="color: green; font-size: 15px;">${status}</span>
 								<p>First Name</p>
-								<input type="text" name="firstname" class="as">
+								<input type="text" name="firstname" class="as" required="">
 							</li>
 							<li>
 								<p>Last Name</p>
-								<input type="text" name="lastname" class="as">
+								<input type="text" name="lastname" class="as" required="">
 							</li>
 							<li>
 								<p>Phone Number</p>
-								<input type="text" name="PhoneNumber" class="as">
+								<input type="text" name="PhoneNumber" class="as" required="">
 							</li>
 							<li>
 								<p>E-mail</p>
-								<input type="text" name="Email" class="as">
+								<input type="text" name="Email" class="as" required="">
 							</li>
 							<li>
 								<p>Message</p>
-								<textarea rows="8" cols="65" name="Details" ></textarea>
+								<textarea rows="8" cols="65" name="Details" required=""></textarea>
 							</li>
 							<li></li>
 							<button type="submit" class="btn btn-primary btn-lg" style="background: #332C2C;">Submit</button>

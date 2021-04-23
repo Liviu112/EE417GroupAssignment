@@ -2,18 +2,18 @@ CREATE DATABASE TheGardenCenterDataBase;
 
 use TheGardenCenterDataBase;
 
-CREATE TABLE CustomersInformation (
-  CustomerID int NOT NULL,
-  FirstName varchar(30) NOT NULL,
-  Surname varchar(30) NOT NULL,
-  Email varchar(50) DEFAULT NULL,
-  MobileNumber varchar(30) DEFAULT NULL,
-  Address varchar(50) DEFAULT NULL,
-  Eircode varchar(10) DEFAULT NULL,
-  Town varchar(15) DEFAULT NULL,
-  County varchar(10) DEFAULT NULL,
-  LastEnteryDate varchar(30) NOT NULL
-);
+CREATE TABLE `customersinformation` (
+  `CustomerID` int NOT NULL,
+  `FirstName` varchar(30) NOT NULL,
+  `Surname` varchar(30) NOT NULL,
+  `Email` varchar(50) DEFAULT NULL,
+  `MobileNumber` varchar(30) DEFAULT NULL,
+  `Address` varchar(50) DEFAULT NULL,
+  `Eircode` varchar(10) DEFAULT NULL,
+  `Town` varchar(15) DEFAULT NULL,
+  `County` varchar(10) DEFAULT NULL,
+  `LastEnteryDate` varchar(30) NOT NULL
+) ;
 
 CREATE TABLE Marketing (
   CustomerID int NOT NULL,
@@ -50,11 +50,16 @@ CREATE TABLE `productsinformation` (
 );
 
 CREATE TABLE `transactionshistory` (
-  `ProductID` int NOT NULL,
+  `transactionID` int NOT NULL,
+  `PaymentID` int NOT NULL,
+  `ProductsID` varchar(45) NOT NULL,
   `CustomerID` int NOT NULL,
   `Quantity` varchar(15) NOT NULL,
-  `TotalValue` varchar(20) NOT NULL,
-  `TransactionDate` varchar(30) NOT NULL
+  `TotalValue` double NOT NULL,
+  `TransactionDate` varchar(30) NOT NULL,
+  `billingDetailsID` varchar(45) NOT NULL,
+  `DeliveryMethod` varchar(45) NOT NULL,
+  PRIMARY KEY (`transactionID`)
 );
 
 CREATE TABLE `productshistory` (
@@ -80,7 +85,34 @@ CREATE TABLE `contactformlog` (
   `Email` varchar(45) NOT NULL,
   `Message` longtext NOT NULL,
   `ResponseStatus` varchar(20) DEFAULT NULL,
+  `LastEnteryDate` varchar(30) NOT NULL,
   PRIMARY KEY (`ContactFormLogID`)
+);
+
+CREATE TABLE `paymentsdetails` (
+  `PaymentID` int NOT NULL,
+  `CardType` varchar(45) NOT NULL,
+  `CardNumber` varchar(25) NOT NULL,
+  `ExpirationDate` varchar(7) NOT NULL,
+  `SecurityCode` int NOT NULL,
+  `CardHolderName` varchar(45) NOT NULL,
+  `EnteryDate` varchar(30) NOT NULL,
+  PRIMARY KEY (`PaymentID`)
+);
+
+CREATE TABLE `billingdetails` (
+  `billingDetailsID` int NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `FirstName` varchar(45) NOT NULL,
+  `LastName` varchar(45) NOT NULL,
+  `Address` varchar(45) NOT NULL,
+  `City` varchar(45) NOT NULL,
+  `Country` varchar(45) NOT NULL,
+  `Region` varchar(45) NOT NULL,
+  `LastEnteryDate` varchar(20) NOT NULL,
+  `PostalCode` varchar(20) NOT NULL,
+  `Phone` varchar(45) NOT NULL,
+  PRIMARY KEY (`billingDetailsID`)
 );
 
 insert into customersacc (CustomerID, Username, Pass, LastChangeDate, AccType) values(1, "Alex", "Alex", "20/20/2020","normal");
