@@ -34,7 +34,7 @@
 		</div>	
 
         <div id="wrap" style="margin-left: 0%; margin-right: 0%; padding:0;height: 700px;"> 
-            <form id="formContact" method="POST" action="contactForm">
+            <form id="formContact" method="POST" action="contactForm"  style="margin-left: 100px">
 	            <div id="wrapleft">
 	                <div class="contact">
 	                    <h1>Contact Form</h1>
