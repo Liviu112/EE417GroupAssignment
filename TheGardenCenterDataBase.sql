@@ -72,6 +72,17 @@ CREATE TABLE `productimages` (
   PRIMARY KEY (`ImageID`)
 );
 
+CREATE TABLE `contactformlog` (
+  `ContactFormLogID` int NOT NULL,
+  `FirstName` varchar(45) NOT NULL,
+  `LastName` varchar(45) NOT NULL,
+  `PhoneNumber` varchar(20) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `Message` longtext NOT NULL,
+  `ResponseStatus` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`ContactFormLogID`)
+);
+
 insert into customersacc (CustomerID, Username, Pass, LastChangeDate, AccType) values(1, "Alex", "Alex", "20/20/2020","normal");
 insert into customersacc (CustomerID, Username, Pass, LastChangeDate, AccType) values(2, "Rex", "Rex", "20/20/2020","admin");
 
@@ -97,7 +108,6 @@ insert into productsinformation (ProductID, ScientificName, CommonName, Dimensio
 insert into productsinformation (ProductID, ScientificName, CommonName, Dimension, Colour, Price, Maturity, Availability, LastEntryRefresh, DeleteStatus, ModifiedBy) values("19", "Four o Clock Flower", "CommonName", "Dimension", "Colour", "20.99", "Maturity", "100", "2019/11/17 22:57:17", "0", "0");
 insert into productsinformation (ProductID, ScientificName, CommonName, Dimension, Colour, Price, Maturity, Availability, LastEntryRefresh, DeleteStatus, ModifiedBy) values("20", "Flowering Dodwood", "CommonName", "Dimension", "Colour", "20.99", "Maturity", "100", "2019/11/17 23:57:17", "0", "0");
 
-
 insert into productimages (ImageID, ProductID, Location) values('0', '0', './Images-Products/flowers/mix/blue-hibiscus-1.jpg');
 insert into productimages (ImageID, ProductID, Location) values('1', '1', './Images-Products/flowers/mix/abutilon.jpg');
 insert into productimages (ImageID, ProductID, Location) values('2', '2', './Images-Products/flowers/mix/acacia.jpg');
@@ -119,3 +129,6 @@ insert into productimages (ImageID, ProductID, Location) values('17', '17', './I
 insert into productimages (ImageID, ProductID, Location) values('18', '18', './Images-Products/flowers/mix/forget-me-not-flower.jpg');
 insert into productimages (ImageID, ProductID, Location) values('19', '19', './Images-Products/flowers/mix/four-oclock-flower.jpg');
 insert into productimages (ImageID, ProductID, Location) values('20', '20', './Images-Products/flowers/mix/flowering-dogwood.jpg');
+
+insert into contactformlog (ContactFormLogID, FirstName, LastName, PhoneNumber, Email, Message, ResponseStatus,LastEnteryDate) values('1', 'Liviu', 'Nastase', '0892241743', 'liviu.nastase2@mail.dcu.ie', 'Will the price change if I but over 100 pices?', 'Panding','2021/04/23 11:45:10');
+insert into contactformlog (ContactFormLogID, FirstName, LastName, PhoneNumber, Email, Message, ResponseStatus,LastEnteryDate) values('2', 'Alex', 'Nastase', '0892053543', 'liviu.nastase3@mail.dcu.ie', 'How long it will take to deliver to Dublin?', 'Panding','2021/04/23 11:50:10');

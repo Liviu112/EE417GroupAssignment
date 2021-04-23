@@ -34,35 +34,39 @@
 		</div>	
 
         <div id="wrap" style="margin-left: 0%; margin-right: 0%; padding:0;height: 700px;"> 
-            <div id="wrapleft">
-                <div class="contact">
-                    <h1>Contact Form</h1>
-					<ul class="form">
-						<li>
-							<p>First Name</p>
-							<input type="text" name="firstname" class="as">
-						</li>
-						<li>
-							<p>Last Name</p>
-							<input type="text" name="lastname" class="as">
-						</li>
-						<li>
-							<p>Phone Number</p>
-							<input type="text" name="PhoneNumber" class="as">
-						</li>
-						<li>
-							<p>E-mail</p>
-							<input type="text" name="Email" class="as">
-						</li>
-						<li>
-							<p>Message</p>
-							<textarea rows="8" cols="65"></textarea>
-						</li>
-						<li></li>
-						<button type="button" class="btn btn-primary btn-lg" style="background: #332C2C;">Submit</button>
-					</ul>
-                </div>
-			</div>
+            <form id="formContact" method="POST" action="contactForm">
+	            <div id="wrapleft">
+	                <div class="contact">
+	                    <h1>Contact Form</h1>
+						<ul class="form">
+							<li>
+							<span style="color: red; font-size: 15px; ">${error}</span>
+	        				<span style="color: green; font-size: 15px;">${status}</span>
+								<p>First Name</p>
+								<input type="text" name="firstname" class="as">
+							</li>
+							<li>
+								<p>Last Name</p>
+								<input type="text" name="lastname" class="as">
+							</li>
+							<li>
+								<p>Phone Number</p>
+								<input type="text" name="PhoneNumber" class="as">
+							</li>
+							<li>
+								<p>E-mail</p>
+								<input type="text" name="Email" class="as">
+							</li>
+							<li>
+								<p>Message</p>
+								<textarea rows="8" cols="65" name="Details" ></textarea>
+							</li>
+							<li></li>
+							<button type="submit" class="btn btn-primary btn-lg" style="background: #332C2C;">Submit</button>
+						</ul>
+	                </div>
+				</div>
+			</form>
 			<div id="wrapright">
 				<h1>Contact Details</h1>
 				<br>
@@ -95,7 +99,7 @@
 			</div>
 		</div>
 		
-	    <div id="box">
+	    <div id="box" style="margin-top:20px;">
 	            <script>
 	            	let map;
 
