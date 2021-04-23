@@ -42,7 +42,7 @@
 									<input type="checkbox" name = "RememberMe">Remember me	
 								</p>
 								<p>
-	                                <a class="" href="reset.jsp">LOST OR FORGET PASSWORD?</a>
+	                                <a class="" href="reset.jsp" style="color:red;">LOST OR FORGET PASSWORD?</a>
 	                            </p>
 							</div>
 						</li>
