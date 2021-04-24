@@ -62,7 +62,7 @@
 	<div class="row">
 		<div class="col-xs-6 col-md-6">
 			<a href="products.jsp" class="thumbnail"><img
-				src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg"
+				src="Images-Products/flowers/mix/white-daisy.jpg"
 				width="400" alt="...">
 				<p
 					style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Daisy</p></a>
@@ -70,7 +70,7 @@
 
 		<div class="col-xs-6 col-md-6">
 			<a href="products.jsp" class="thumbnail"><img
-				src="Images-Products/flowers/dandelion/5600240736_4a90c10579_n.jpg"
+				src="Images-Products/flowers/mix/yellow-dandelion.jpg"
 				width="400" alt="...">
 				<p
 					style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Dandelion</p></a>
@@ -80,7 +80,7 @@
 	<div class="row">
 		<div class="col-xs-6 col-md-6">
 			<a href="products.jsp" class="thumbnail"><img
-				src="Images-Products/flowers/roses/1469726748_f359f4a8c5.jpg"
+				src="Images-Products/flowers/mix/white-rock-rose.jpg"
 				width="400" alt="...">
 				<p
 					style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Rose</p></a>
@@ -88,7 +88,7 @@
 
 		<div class="col-xs-6 col-md-6">
 			<a href="products.jsp" class="thumbnail"><img
-				src="Images-Products/flowers/tulips/8838914676_8ef4db7f50_n.jpg"
+				src="Images-Products/flowers/mix/pink-purple-tulips.jpg"
 				width="400" alt="...">
 				<p
 					style="color: #ff523b; font-family: Ubuntu; font-size: 2.5rem; font-weight: bold">Tulips</p></a>
