@@ -176,7 +176,6 @@ textarea{
 }
 
 #wrapleft{
-	background: #fefef6;
     margin: 0;
     padding: 0;
 	padding-top: 20px;
@@ -184,7 +183,6 @@ textarea{
 }
 
 #wrapright{
-	background: #fefef6;
 	margin: 0;
 	padding: 0;
 	width: 50%;
@@ -447,12 +445,12 @@ font-size:25px;
 }
 
 .cube .img1 {
-  background-image: url("../Images-Products/flowers/daisy/54377391_15648e8d18.jpg");
+  background-image: url("../Images-Products/flowers/mix/anemone.jpg");
   transform: rotateY(0deg) translateZ(125px);
 }
 
 .cube .img2 {
-  background-image: url("../Images-Products/flowers/dandelion/5600240736_4a90c10579_n.jpg");
+  background-image: url("../Images-Products/flowers/mix/bluebells.jpg");
   transform: rotateY(90deg) translateZ(125px);
 }
 
