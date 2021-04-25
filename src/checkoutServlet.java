@@ -190,6 +190,5 @@ public class checkoutServlet extends HttpServlet {
 		            System.exit(0);
 		        }
 		  return "success";
-	}
-	
+	}	
 }
