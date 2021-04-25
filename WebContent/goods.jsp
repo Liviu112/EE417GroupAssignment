@@ -42,7 +42,7 @@
 		<div class="row">
 			<div class="col-md-2">&nbsp</div>
 			<div class="col-md-4">
-				<img src="Images-Products/flowers/daisy/54377391_15648e8d18.jpg"
+				<img src="Images-Products/flowers/mix/abutilon.jpg"
 					width="100%" alt="">
 			</div>
 

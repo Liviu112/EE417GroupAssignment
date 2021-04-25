@@ -4,4 +4,3 @@ window.onload = function() {
 		document.getElementById("loader").remove();
 	}, 1000);
 }
-
