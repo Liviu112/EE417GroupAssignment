@@ -199,7 +199,7 @@
 						</div>
 
 						<div class="col-md-12">
-							<button type="submit" class="btn btn-default btn-xs"
+							<button type="submit" onclick="clearbasket()" class="btn btn-default btn-xs"
 								style="background: #332C2C; border-color: #332C2C; color: white">&nbsp
 								&nbsp &nbsp &nbsp Confirm &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</button>
 						</div>
@@ -217,6 +217,6 @@
 	</div>
 
 	<jsp:include page="footer_menu.jsp" />
-
+	<script src="js/index.js"></script>
 </body>
 </html>
